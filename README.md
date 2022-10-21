@@ -15,5 +15,5 @@
   
   <ul>
     <li> <a  style="font-size:18px; color:black;" href="hhttps://github.com/YsDnG/Rock-Paper-Scissor"> Live Demo ! </a> </li>
-    <li> <a  style="font-size:18px; color:black;" href="https://github.com/YsDnG/Rock-Paper-Scissor"> GitHub </li>
+    <li> <a  style="font-size:18px; color:black;" href="https://ysdng.github.io/Rock-Paper-Scissor"> GitHub </li>
   </ul> 
