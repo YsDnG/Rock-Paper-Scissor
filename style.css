@@ -1,0 +1,14 @@
+body {
+    width : 100%;
+      gap : 2em ;
+      height: 100vh; 
+      display: flex; 
+      Justify-content: center; 
+      Align-items:center;
+      background-color: black;
+}
+
+#startButton{
+    width: 5em;
+    text-align: center;
+}
