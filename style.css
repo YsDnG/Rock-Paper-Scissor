@@ -2,7 +2,8 @@ body {
     width : 100%;
       gap : 2em ;
       height: 100vh; 
-      display: flex; 
+      display: flex;
+      flex-direction: column; 
       Justify-content: center; 
       Align-items:center;
       background-color: black;
@@ -11,4 +12,49 @@ body {
 #startButton{
     width: 5em;
     text-align: center;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+.buttonReceiver
+{
+    width: 300px;
+    height: auto;
+    background-color: grey;
+    padding: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.resetButton{
+    background-color: red;
+}
+
+#containerButtonChoice
+{
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+}
+#result
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;       
+    padding: 2em;
+    background-color: grey;
+    border-radius: 50%;
+}
+#startButton
+{
+    padding: 10px; 
+}
+.buttonChoice{
+    
+    background-color: green;
 }
