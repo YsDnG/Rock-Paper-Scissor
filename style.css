@@ -1,60 +1,241 @@
-body {
-    width : 100%;
-      gap : 2em ;
-      height: 100vh; 
-      display: flex;
-      flex-direction: column; 
-      Justify-content: center; 
-      Align-items:center;
-      background-color: black;
+@font-face {
+    font-family: neon;
+    src: url("./font/hello-denver-display/hellodenverdisplayregular_v1.6.ttf");
+}
+@font-face {
+    font-family: buttonFont;
+    src: url("./font/Aldrich/Aldrich-Regular.ttf");
 }
 
-#startButton{
-    width: 5em;
+
+
+
+
+html
+{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background: #232323;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+header{
+    margin: 0;
+    width: 100vw;
+    height: 30vh;    
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+    0 0 0.1vw  0.2vw #e50b0b,   
+    0 0 0.4vw  0.3vw #e97272, 
+    0 0   4vw  0.2vw #2db300,
+  
+    inset 0 0 1.5vw  0.4vw #1b67e0,
+    inset 0 0 0.4vw  0.2vw #e97272,
+    inset 0 0 0.3vw  0.2vw #fff7f7;
+}
+h1{
     text-align: center;
+    font-family: neon;
+    font-size: 8rem;
+    
 }
-div{
+.rock{
+  
+    color: #e50b0b;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #e50b0b, 0 0 30px #e50b0b, 0 0 40px #e50b0b, 0 0 55px #e50b0b, 0 0 75px #e50b0b;
+}
+.paper{
+    
+    color: #2db300;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #2db300, 0 0 30px #2db300, 0 0 40px #2db300, 0 0 55px #2db300, 0 0 75px #2db300;
+}
+.scissor{
+   
+    color: #1b67e0;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1b67e0, 0 0 30px #1b67e0, 0 0 40px #1b67e0, 0 0 55px #1b67e0, 0 0 75px #1b67e0;
+}
+.button-container{
+    height:15vh;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1px;
-}
-.buttonReceiver
-{
-    width: 300px;
-    height: auto;
-    background-color: grey;
-    padding: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-}
-.resetButton{
-    background-color: red;
 }
 
-#containerButtonChoice
+.display
 {
-    display: flex;
-    gap: 1em;
+    height: 25vh;
+    width: 60vw;
+    background-color: black;
+    background-image: url('./Img/gon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    border: 0.5rem solid grey;
     padding: 1em;
 }
-#result
+
+.dynamic-txts{
+    display: inline-block;
+    color: #EFEFEF;
+ 
+}
+
+.dynamic-txts p {
+    font-family: neon;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    animation: typing 1s steps(50, end) forwards;
+    font-size: 1.6rem;
+}
+.start
 {
     color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;       
-    padding: 2em;
-    background-color: grey;
-    border-radius: 50%;
 }
-#startButton
-{
-    padding: 10px; 
-}
-.buttonChoice{
+.win{
+    color: #2db300;
+    text-shadow: rgb(0,0,255,) 0px 3px 3px;
     
-    background-color: green;
 }
+.loose{
+    color: #e50b0b;
+    text-shadow: rgb(0,0,255,) 0px 3px 3px;
+}
+.tie{
+    color:#1b67e0;
+    text-shadow: rgb(0,0,255,) 0px 3px 3px;
+}
+
+@keyframes typing{
+    from{ width: 0;}
+    to {width: 100%;}
+}
+
+
+
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+      height: 5rem;
+      border: 1em dashed;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 1rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+}
+.buttonChoice.rock{
+    background-image: url('./Img/imageedit_9_8268252743.png');
+    background-size:350%;
+    overflow: hidden;
+    background-position:center center;
+
+}
+.buttonChoice.paper
+{
+    background-image: url('./Img/imageedit_20_9527402493.png');
+    background-size:300%;
+    overflow: hidden;
+    background-position:center top 45%;
+
+}
+.buttonChoice.scissor{
+    background-image: url('./Img/imageedit_17_7608943391.png');
+    background-size:250%;
+    overflow: hidden;
+    background-position: center top 45%;
+}
+
+.buttonChoice
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #232323;
+    padding: 3rem;
+    font-family: buttonFont;
+    font-weight: bold;
+    font-size: 1em;
+    overflow: hidden;
+
+}
+
+.buttonGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border: 0.5em dashed;
+    border-radius: 50%;
+    background-color: #232323;
+    padding: 3rem;
+    font-family: buttonFont;
+    font-weight: bold;
+    font-size: 1em;
+    overflow: hidden;
+    color:#2db300;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #2db300, 0 0 30px #2db300, 0 0 40px #2db300, 0 0 55px #2db300, 0 0 75px #2db300;
+}
+
+.footer a {
+    font-size: 1.5em;
+}
+.footer a:hover{
+    background-image: linear-gradient(90deg, rgb(202, 239, 215) 0%, rgb(245, 191, 215) 50%, rgb(171, 201, 233) 100%);
+    border: 1px solid black;
+    
+    padding: 0 1em;
+
+}
+
+ footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    font-family: buttonFont;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    opacity: 0.7;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+ }
+
+ .footer {
+    color: #1f2937;
+    background: rgb(0, 0, 0);
+    padding: 1.25em 0;
+    margin: 1em;
+    box-shadow: 0 0 1em rgb(0 0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+ 
