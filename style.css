@@ -48,7 +48,8 @@ header{
 h1{
     text-align: center;
     font-family: neon;
-    font-size: 8rem;
+    font-size: 6rem;
+    
     
 }
 .rock{
@@ -100,7 +101,7 @@ h1{
     border-right: .15em solid black;
     white-space: nowrap;
     animation: typing 1s steps(50, end) forwards;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 .start
 {
@@ -124,8 +125,6 @@ h1{
     from{ width: 0;}
     to {width: 100%;}
 }
-
-
 
 .choice{
     display: flex;
@@ -222,20 +221,127 @@ h1{
     opacity: 0.7;
     color: white;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
+    line-height: 1em;
  }
 
  .footer {
     color: #1f2937;
     background: rgb(0, 0, 0);
-    padding: 1.25em 0;
-    margin: 1em;
     box-shadow: 0 0 1em rgb(0 0 0);
+    padding: 1em 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+@media screen and (max-width:1050px) 
+{ 
+    h1{
+        font-size: 5rem;
+    }
+    .dynamic-txts p {
+        font-family: neon;
+        overflow: hidden;
+        border-right: .15em solid black;
+        animation: typing 1s steps(50, end) forwards;
+        font-size: 1.2rem;
+    }
+    .buttonGame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        border: 0.1em dashed;
+        border-radius: 50%;
+        background-color: #232323;
+        padding: 2.5rem;
+        font-family: buttonFont;
+        font-weight: bold;
+        font-size: 0.8rem;
+        overflow: hidden;
+        color:#2db300;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #2db300, 0 0 30px #2db300, 0 0 40px #2db300, 0 0 55px #2db300, 0 0 75px #2db300;
+    }
+
+    .choice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        border-radius: 50%;
+        margin: 50px auto;
+        position: relative;
+        padding: 1rem;
+        box-shadow:none
+            
+    }
+    footer{
+        font-size: 0.7rem;
+        line-height: 0;
+    }
+    
+}
+
+@media screen and (max-width:500px)
+{
+    h1{
+        font-size: 2rem;
+    }
+    .dynamic-txts p {
+        font-family: neon;
+        overflow: hidden;
+        border-right: .15em solid black;
+        
+        white-space: initial;
+        font-size: 0.8rem;
+    }
+    .buttonGame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.1em dashed;
+        border-radius: 50%;
+        background-color: #232323;
+        padding: 1.75rem;
+        font-family: buttonFont;
+        font-weight: bold;
+        font-size: 0.8rem;
+        overflow: hidden;
+        color:#2db300;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #2db300, 0 0 30px #2db300, 0 0 40px #2db300, 0 0 55px #2db300, 0 0 75px #2db300;
+    }
+
+   .choice {
+        padding: 0.5em;
+    }
+    .buttonChoice{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: #232323;
+        padding: 1.75rem;
+        font-family: buttonFont;
+        font-weight: bold;
+        font-size: 0.8em;
+        overflow: hidden;
+        margin-bottom: 5em;
+     
+    }
+    
+
+
+}
+
 
 
  
