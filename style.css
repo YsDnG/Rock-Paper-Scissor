@@ -74,6 +74,30 @@ h1{
     justify-content: center;
     align-items: center;
 }
+.container{
+    display: flex;
+    gap:1em
+}
+.score{
+    height: 12.5vh;
+    width: 25vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    border: 0.5rem solid grey;
+    padding: 1em;
+    color: #EFEFEF;
+
+}
+.score p{
+    font-family: neon;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    
+}
 
 .display
 {
@@ -298,6 +322,17 @@ h1{
         
         white-space: initial;
         font-size: 0.8rem;
+    }
+    .score p{
+        font-family: neon;
+        overflow: hidden;
+        border-right: .15em solid black;
+        white-space: initial;
+        font-size: 0.8rem;
+
+    }
+    .container{
+        width: 100vw;
     }
     .buttonGame{
         display: flex;
